@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>
+          <%= title %>
+        </title>
+        <link rel="stylesheet" href="/style.css">
+        <script src="https://kit.fontawesome.com/beaeb94fe0.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+    
+        <h1>Todo App</h1>
+        <!-- Create form for adding the task to the Todo list -->
+        <form method="POST" action="/create-task">
+            <div class="content" style="margin-left: auto; margin-right: auto;">
+                <div class="sub-content">
+                    <textarea rows="4" cols="100" name="Description" placeholder="What do you need to do?" required></textarea>
+
+                </div>
+                <div class="sub-content2" style="margin-top: 2%;">
+                    <input type="date" name="Date" required>
+
+                </div>
+                <div class="sub-content3" style="margin-top: 2%;">
+                     
+               <select name="categories" id="categories" style="background: transparent; padding: 2%; border: none;">
+                <option value="Work">Work</option>
+                <option value="School">School</option>
+                <option value="Ideas">Ideas</option>
+                <option value="Cooking">Cooking</option>
+                <option value="Payment">Payment</option>
+                <option value="Meetings">Meetings</option>
+                <option value="Vacations">Vacations</option>
+             </select>
+                </div>
+               
+            </div>
+            <div style="margin-left: 70%; margin-top: 2%; margin-bottom: 4%;"> 
+                <button style="padding: 1%; background-color: transparent; border-radius: 7px;">
+                    <i class="fas fa-plus"></i>
+                    ADD TASK
+                </button>
+            </div>
+            
+        </form>
+  
+  
+  
+   <!-- Display the task created by the user -->
+        <ul style="list-style-type:none; ">
+            <% for (let i of Todo_list){%>
+                <li>
+                    <div class="container" style="margin-left: auto; margin-right: auto;">
+                        <div class="item">
+                            <p>
+                                <%= i.Description %>
+                            </p>
+                        </div>
+                        <div class="item2">
+                            <p style="font-weight: bolder; font-size:x-small;">
+                                <i class="fas fa-calendar-week"></i>
+                                <%= i.Date %>
+                            </p>
+                        </div>
+                        <div class="item3">
+                             <p style="font-weight: bolder; font-size:x-small;">
+                               <button style="padding: 1%; background-color:chocolate; border-radius: 3px; border: chocolate;">
+                                   <%= i.categories %>         
+                               </button>
+                             </p>                           
+                        </div>
+                           <div class="item4" style="padding: 1%;">
+                              <a href="/delete-task/<%= i.Date %>">
+                               <i class="fas fa-trash-alt fa-sm"></i>
+                              </a>
+                          </div>
+                        </div>
+                    <hr>
+                </li>
+            <%} %>
+        </ul>
+    </body>
+</html>
+

@@ -1,0 +1,106 @@
+body{
+    background-color: wheat;
+    margin: 0%;
+}
+h1{
+    color: chocolate;
+    text-align: center;
+    margin-top: 2%;
+}
+
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.item{
+    align-content:space-around;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.item2{
+    align-content:space-around;
+    flex-grow: 1;
+    width: 20%;
+
+
+}
+
+.item3{
+    align-content:space-around;
+    width: 20%;
+
+    flex-grow: 1;
+
+}
+
+.item4{
+    align-content:space-around;
+    flex-grow: 1;
+    width: 20%;
+
+
+}
+
+p{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: small;
+    font-weight: 400;
+}
+
+a{
+    color: chocolate;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.sub-content{
+    align-content:space-around;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.sub-content2{
+    align-content:space-around;
+    flex-grow: 1;
+    width: 40%;
+}
+
+.sub-content3{
+    align-content:space-around;
+    flex-grow: 1;
+    width: 40%;
+}
+
+.sub-content4{
+    align-content:space-around;
+    flex-grow: 1;
+    width: 100%;
+}
+
+textarea{ 
+    outline: none;
+    border-color: Transparent;  
+    border:none; 
+    background-color: transparent;
+}
+
+input {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    padding: 2%;
+}
+
+option{
+    background-color: transparent;
+}
